@@ -1,0 +1,86 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>Ingram Connect</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+	<script src="jquery-1.11.1.min.js"></script>
+	<script src="jquery.mobile-1.4.5.js"></script>
+</head>
+
+<body>
+<!-- Start of first page -->
+<div data-role="page" id="categorias">
+
+	<div data-role="header" data-theme="b">
+		<h1>Categorias</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+	<form>
+	    <input data-type="search" id="searchForCollapsibleSetChildren">
+	</form>
+    <div data-role="collapsibleset" data-filter="true" data-children="> div, > div div ul li" data-inset="true" id="collapsiblesetForFilterChildren" data-input="#searchForCollapsibleSetChildren">
+        <div data-role="collapsible" data-filtertext="Animals Cats Dogs Lizards snakes">
+            <h3>Animals</h3>
+            <ul data-role="listview" data-inset="false">
+                <li data-filtertext="Animals Cats">Cats</li>
+                <li data-filtertext="Animals Dogs">Dogs</li>
+                <li data-filtertext="Animals Lizards">Lizards</li>
+                <li data-filtertext="Animals Snakes">Snakes</li>
+            </ul>
+        </div>
+        <div data-role="collapsible" data-filtertext="Cars Acura Audi BMW Cadillac">
+            <h3>Cars</h3>
+            <ul data-role="listview" data-inset="false">
+                <li data-filtertext="Cars Acura">Acura</li>
+                <li data-filtertext="Cars Audi">Audi</li>
+                <li data-filtertext="Cars BMW">BMW</li>
+                <li data-filtertext="Cars Cadillac">Cadillac</li>
+            </ul>
+        </div>
+        <div data-role="collapsible" data-filtertext="Planets Earth Jupiter Mars Mercury">
+            <h3>Planets</h3>
+            <ul data-role="listview" data-inset="false">
+                <li data-filtertext="Planets Acura">Earth</li>
+                <li data-filtertext="Planets Jupiter">Jupiter</li>
+                <li data-filtertext="Planets Mars">Mars</li>
+                <li data-filtertext="Planets Mercury">Mercury</li>
+            </ul>
+        </div>
+    </div>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-iconpos="bottom">
+			<ul>
+				<li><a href="#categorias" class="ui-btn-active">Categorias</a></li>
+				<li><a href="#marcas">Marcas</a></li>
+			</ul>
+		</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<!-- Start of second page -->
+<div data-role="page" id="marcas">
+
+	<div data-role="header" data-theme="b">
+		<h1>Marcas</h1>
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
+		<p><a href="#categorias">Back to foo</a></p>
+	</div><!-- /content -->
+
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<div data-role="navbar" data-iconpos="bottom">
+			<ul>
+				<li><a href="#categorias">Categorias</a></li>
+				<li><a href="#marcas" class="ui-btn-active">Marcas</a></li>
+			</ul>
+		</div>
+	</div><!-- /footer -->
+</div><!-- /page -->
+</body>
+</html>
