@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="">
 	<script src="jquery-1.11.1.min.js"></script>
 	<script src="jquery.mobile-1.4.5.js"></script>
+	<script src="custom.js"></script>
 	<link rel="shortcut icon" href="images/logo-wn.png">
 
 
@@ -27,13 +28,13 @@
 		<h1><img src="images/logo-wn.png"></h1>
 	</div><!-- /header -->
 
-	<div role="main" class="ui-content">
+	<div id="contactobody" role="main" class="ui-content">
 		<h2>Contácto</h2>
 		<address>
 			<strong>Teléfono de emergencia:</strong> 664 684-3787 <br>
 			<strong>Visítanos en:</strong> Ave. Cerro de la silla 100, <br> Interior G, Fracc. Laderas de Monterrey, <br> Tijuana, Baja California, México
 		</address>
-		
+		<p><img id="imgoffice" src="images/office.png"></p>
 	</div><!-- /content -->
 
 	<div data-role="footer" data-position="fixed" data-theme="a">
@@ -55,9 +56,12 @@
 	</div><!-- /header -->
 
 	<div role="main" class="ui-content">
+		<p>Tienes una urgencia que compartirnos?</p>
+		
+		<input name="correo" id="correo" value="" type="email" placeholder="correo para comunicarnos contigo">		
 
-	</div><!-- /content -->
-
+		<textarea id="suceso" name="suceso" placeholder="platicanos que sucede"></textarea>
+		<button id="" class="ui-shadow ui-btn ui-corner-all">Enviar</button>
 	<div data-role="footer" data-position="fixed" data-theme="a">
 		<div data-role="navbar" data-iconpos="bottom">
 			<ul>
