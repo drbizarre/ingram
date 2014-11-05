@@ -2,3 +2,7 @@
 .ui-btn-active{ background: #88cc00!important;}
 #imgoffice{ width: 100%;}
 #contactobody{text-align: center;}
+.warning{ border: 1px solid red;}
+.error {
+    color:red;
+}
