@@ -1,12 +1,5 @@
 
-// Update configuration to our liking
-$( document ).on( "mobileinit", function() {
 
-	$( "#envialo" ).click(function() {
-		$("#suceso").hide();
-	}); 
-
-});
 $( document ).ready(function() {
 $('#form1').validate({
     rules: {
@@ -31,15 +24,15 @@ $('#form1').validate({
     submitHandler: function (form) {
     	$("#correo").val("");
     	$("#suceso").val("");
+    	
     	$.post( "http://whynot.mx/api/enviar", { correo: $("#correo").val(), mensaje: $("#suceso").val() })
 .done(function( data ) {
 
 });
+
 $.get( "https://rest.nexmo.com/sms/json", { api_key: "dedd250e", api_secret: "b879f1e6", from: "WHYNOT", to: "526641108064", text: "haz recibido una nueva peticion de ayuda desde la aplicacion de movil de whynot"  } );
 
-        $(':mobile-pagecontainer').pagecontainer('change', '#success', {
-            reload: false
-        });
+        $.mobile.changePage( $("#success"), "slide", true, true);
         return false;
         
     }
